@@ -2,16 +2,17 @@ package com.spring.model;
 
 public class User{
 	int uid;
-	String username,email;
-	public User(String username, String email) {
+	String name,email;
+	public User() {}
+	public User(String name, String email) {
 		super();
-		this.username = username;
+		this.name = name;
 		this.email = email;
 	}
-	public User(int uid, String username) {
+	public User(int uid, String name) {
 		super();
 		this.uid = uid;
-		this.username = username;
+		this.name = name;
 	}
 	public int getUid() {
 		return uid;
@@ -19,11 +20,11 @@ public class User{
 	public void setUid(int uid) {
 		this.uid = uid;
 	}
-	public String getUsername() {
-		return username;
+	public String getName() {
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getEmail() {
 		return email;
@@ -31,6 +32,9 @@ public class User{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
+	@Override
+	public String toString() {
+		return "User [uid=" + uid + ", name=" + name + ", email=" + email + "]";
+	}
+		
 }

@@ -14,11 +14,13 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 public class AppConfig{
 	@Bean
 	public DataSource dataSource() {
+//		System.out.println("get entry");
 		DriverManagerDataSource dmds = new DriverManagerDataSource();
 		dmds.setUrl("jdbc:mysql://localhost:3306/spring330");
 		dmds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		dmds.setUsername("root");
 		dmds.setPassword("root");
+//		System.out.println("get exit");
 		return dmds;
 	}
 	
