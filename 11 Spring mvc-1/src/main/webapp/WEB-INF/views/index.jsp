@@ -6,7 +6,7 @@
 	<body>
 		<blockquote>
 			<hr>
-			<a href="./">Home</a> | 
+			<a href="${pageContext.request.contextPath}/">Home</a>	|
 			<a href="about">About</a> 
 			<hr>
 			<h2>Home Page</h2>
@@ -16,3 +16,8 @@
 		</blockquote>
 	</body>
 </html>
+<!--
+option 1 : request.getContextPath() inside expression tag 
+option 2 : ./ 
+option 3 : ${pageContext.request.contextPath} 
+  -->
